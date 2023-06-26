@@ -1,0 +1,141 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "",
+    "title" : "Ejemplo de Swagger UI"
+  },
+  "host" : "SWAGGER_HOST",
+  "basePath" : "/",
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/api/fe/Autenticacion/api/ValidacionCertificado" : {
+      "post" : {
+        "tags" : [ "Autenticacion" ],
+        "operationId" : "1",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "x-has-uniq-produces" : true,
+        "x-has-uniq-consumes" : false,
+        "x-has-notes" : false
+      }
+    },
+    "/api/fe/Autenticacion/api/Semilla" : {
+      "get" : {
+        "tags" : [ "Autenticacion" ],
+        "operationId" : "2",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "x-has-uniq-produces" : true,
+        "x-has-uniq-consumes" : false,
+        "x-has-notes" : false
+      }
+    },
+    "/api/fe/Recepcion/api/ecf" : {
+      "post" : {
+        "tags" : [ "Recepcion" ],
+        "operationId" : "3",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "x-has-uniq-produces" : true,
+        "x-has-uniq-consumes" : false,
+        "x-has-notes" : false
+      }
+    },
+    "/api/fe/AprobacionComercial/api/ecf" : {
+      "post" : {
+        "tags" : [ "Recepcion" ],
+        "operationId" : "4",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "500" : {
+            "description" : "Internal server error"
+          }
+        },
+        "x-has-uniq-produces" : true,
+        "x-has-uniq-consumes" : false,
+        "x-has-notes" : false
+      }
+    }
+  },
+  "definitions" : {
+    "MVCErrorResponse" : {
+      "type" : "object",
+      "properties" : {
+        "classname" : {
+          "type" : "string",
+          "x-is-model-type" : false
+        },
+        "detailedmessage" : {
+          "type" : "string",
+          "x-is-model-type" : false
+        },
+        "apperrorcode" : {
+          "type" : "integer",
+          "x-is-model-type" : false
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/MVCErrorResponse_items"
+          },
+          "x-is-model-type" : true
+        },
+        "statuscode" : {
+          "type" : "integer",
+          "x-is-model-type" : false
+        },
+        "reasonstring" : {
+          "type" : "string",
+          "x-is-model-type" : false
+        },
+        "message" : {
+          "type" : "string",
+          "x-is-model-type" : false
+        },
+        "data" : {
+          "type" : "object",
+          "properties" : { },
+          "x-is-model-type" : true
+        }
+      }
+    },
+    "MVCErrorResponse_items" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "x-is-model-type" : false
+        }
+      }
+    }
+  }
+}
